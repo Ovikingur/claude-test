@@ -1,0 +1,30 @@
+{
+  "name": "myai-assistant",
+  "version": "0.1.0",
+  "description": "A lightweight desktop assistant app for macOS with a floating worm avatar.",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron .",
+    "package:mac": "electron-builder --mac --publish never"
+  },
+  "author": "OpenAI",
+  "devDependencies": {
+    "electron": "^31.7.0",
+    "electron-builder": "^24.0.0"
+  },
+  "build": {
+    "appId": "com.example.myaiassistant",
+    "productName": "MyAI Assistant",
+    "directories": {
+      "output": "dist"
+    },
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ],
+      "category": "public.app-category.productivity"
+    }
+  }
+}
